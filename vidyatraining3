@@ -4,7 +4,7 @@
   "metadata": {
     "colab": {
       "provenance": [],
-      "authorship_tag": "ABX9TyMzgCBMv/rl3de2DQOJGJFC",
+      "authorship_tag": "ABX9TyMc/SQZG4pUriq4pPSfvch1",
       "include_colab_link": true
     },
     "kernelspec": {
@@ -478,6 +478,75 @@
             "enter a string:helloworld\n",
             "No. of vowels: 3\n",
             "No of consonants: 7\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "a = []\n",
+        "b = []\n",
+        "N1 = int(input(\"enter the value of N1:\"))\n",
+        "N2 = int(input(\"enter the value of N2:\"))\n",
+        "a = list(map(int, input(\"Enter the elements: \").split()))\n",
+        "b = list(map(int, input(\"Enter the elements: \").split()))\n",
+        "c = a + b\n",
+        "c = list(set(c))\n",
+        "c.sort()\n",
+        "n = len(c)\n",
+        "if n % 2 == 1:\n",
+        " print(\"op=\", c[n // 2])\n",
+        "else:\n",
+        " median = (c[n // 2 - 1] + c[n // 2]) / 2\n",
+        "print(\"op=\", median)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "u1_ah6VlQ2i4",
+        "outputId": "20463519-f46b-4da8-dbd2-2c4b1f1676b6"
+      },
+      "execution_count": 71,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "enter the value of N1:3\n",
+            "enter the value of N2:3\n",
+            "Enter the elements: 3 5 2\n",
+            "Enter the elements: 1 2 3\n",
+            "op= 2.5\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "n=int(input(\"Enter number:\"))\n",
+        "a=bin(n)\n",
+        "b=a[2:]\n",
+        "b=b.replace('0','y').replace('1','0').replace('y','1')\n",
+        "print(int(b,2))"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "TkoZmgEgl-NU",
+        "outputId": "432a7558-8b58-4dba-c031-67316303601d"
+      },
+      "execution_count": 73,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Enter number:10\n",
+            "5\n"
           ]
         }
       ]
